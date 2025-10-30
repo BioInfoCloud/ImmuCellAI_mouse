@@ -2,13 +2,27 @@
 % Please edit documentation in R/ImmuCellAI_mouse.R
 \name{cell_type_correlation}
 \alias{cell_type_correlation}
-\title{Title}
+\title{Calculate Correlation Between Cell Type Marker Expressions}
 \usage{
 cell_type_correlation(marker_exp, marker_ls)
 }
 \arguments{
-\item{marker_ls}{}
+\item{marker_exp}{Reference expression matrix (rows = marker genes, columns = cell types).}
+
+\item{marker_ls}{List of cell type-specific marker genes (names = cell types, values = gene vectors).}
+}
+\value{
+Cell-cell correlation matrix (rows/columns = cell types). Values are Pearson correlation coefficients.
 }
 \description{
-Title
+Internal helper function to compute Pearson correlation coefficients between the expression profiles
+of different cell types based on their marker genes.
+}
+\examples{
+# Load built-in data
+data("marker_exp")
+data("l1_marker")
+
+# Compute cell correlation
+cell_cor <- cell_type_correlation(marker_exp, l1_marker)
 }
