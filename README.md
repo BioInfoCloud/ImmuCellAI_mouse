@@ -4,7 +4,12 @@ ImmuCellAI-mouse (Immune Cell Abundance Identifier for mouse, https://guolab.wch
 ``` bash
 install.packages("devtools")
 library(devtools)
-install_github("lydiaMyr/ImmuCellAI-mouse@main")
+# old
+# install_github("lydiaMyr/ImmuCellAI-mouse@main")
+
+# new
+install_github("BioInfoCloud/ImmuCellAI_mouse")
+
 #if the "/bin/gtar: not found" error occured, please run the following command "export TAR="/bin/tar" before installation.
 ```
 ## Geting started
